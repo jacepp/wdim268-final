@@ -1,3 +1,6 @@
-name: Your New Jekyll Site
+name:     WDIM268 Final
 markdown: redcarpet
 pygments: true
+port:     4000
+baseurl:  /wdim268-final
+url:      http://localhost:4000

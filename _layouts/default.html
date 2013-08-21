@@ -1,46 +1,109 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+    <script src="{{ site.baseurl }}/js/vendor/custom.modernizr.js"></script>
+  </head>
+  <body>
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
+    <div class="header-wrapper">
+      <header class="row">
+        <h1></h1>
+        <img src="" alt="">
+      </header>
 
-    </head>
-    <body>
+      <nav class="row">
+        <ul class="inline-list">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="">Portfolio</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Pricing</a></li>
+        </ul>
 
-        <div class="container">
-          <div class="site">
-            <div class="header">
-              <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-              <a class="extra" href="/">home</a>
-            </div>
+        <ul class="inline-list">
+          <li><a href="">Log in</a></li>
+          <li>or</li
+          <li><a href=""></a></li>
+        </ul>
+      </nav>
+    </div>
 
-                {{ content }}
+    {{ content }}
 
-            <div class="footer">
-              <div class="contact">
-                <p>
-                  Your Name<br />
-                  What You Are<br />
-                  your@email.com
-                </p>
-              </div>
-              <div class="contact">
-                <p>
-                  <a href="http://github.com/yourusername/">github.com/yourusername</a><br />
-                  <a href="http://twitter.com/yourusername/">twitter.com/yourusername</a><br />
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> <!-- /container -->
+    <div class="bottom-wrapper">
+      <div class="row">
+        <div class="large-3 columns">
+          
+        </div>
+        <div class="large-3 columns">
+          
+        </div>
+        <div class="large-3 columns">
+          <ul class="large-block-grid-2">
+            <li><img src="" alt="" /></li>
+            <li><img src="" alt="" /></li>
+            <li><img src="" alt="" /></li>
+            <li><img src="" alt="" /></li>
+          </ul>
+        </div>
+        <div class="large-3 columns">
+          
+        </div>
+      </div>
+    </div>
 
-    </body>
+    <div class="footer-wrapper">
+      <footer class="row">
+        <div class="large-6 columns">
+          
+        </div>
+        <div class="large-6 columns">
+          <ul class="inline-list">
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+    document.write('<script src=' +
+    ('__proto__' in {} ? '{{ site.baseurl }}/js/vendor/zepto' : '{{ site.baseurl }}/js/vendor/jquery') +
+    '.js><\/script>')
+    </script>
+    
+    <script src="{{ site.baseurl }}/js/foundation/foundation.js"></script>
+    <script src="{{ site.baseurl }}/js/foundation/foundation.magellan.js"></script>
+    <script src="{{ site.baseurl }}/js/foundation/foundation.placeholder.js"></script>
+    <script src="{{ site.baseurl }}/js/foundation/foundation.abide.js"></script>
+    <script src="{{ site.baseurl }}/js/foundation/foundation.joyride.js"></script>
+    <script src="{{ site.baseurl }}/js/foundation/foundation.alerts.js"></script>
+    <script src="{{ site.baseurl }}/js/foundation/foundation.orbit.js"></script>
+    <script src="{{ site.baseurl }}/js/foundation/foundation.reveal.js"></script>
+    <script src="{{ site.baseurl }}/js/foundation/foundation.forms.js"></script>
+    <script src="{{ site.baseurl }}/js/foundation/foundation.topbar.js"></script>
+    <script src="{{ site.baseurl }}/js/foundation/foundation.clearing.js"></script>
+    <script src="{{ site.baseurl }}/js/foundation/foundation.cookie.js"></script>
+    <script src="{{ site.baseurl }}/js/foundation/foundation.interchange.js"></script>
+    <script src="{{ site.baseurl }}/js/foundation/foundation.section.js"></script>
+    <script src="{{ site.baseurl }}/js/foundation/foundation.dropdown.js"></script>
+    <script src="{{ site.baseurl }}/js/foundation/foundation.tooltips.js"></script>
+    
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
 </html>

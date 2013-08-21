@@ -55,3 +55,11 @@
 // @import "foundation/components/tooltips";
 // @import "foundation/components/dropdown";
 
+.inline,
+.inline-list {
+  display: inline-block;
+}
+
+.large-3 + .large-9 {
+  padding-left: 0;
+}

@@ -487,7 +487,7 @@ select {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 62.5em;
+  max-width: 60em;
   *zoom: 1;
 }
 .row:before, .row:after {
@@ -4118,7 +4118,7 @@ label.error {
   }
 
   .contain-to-grid .top-bar {
-    max-width: 62.5em;
+    max-width: 60em;
     margin: 0 auto;
     margin-bottom: 1.875em;
   }
@@ -6115,4 +6115,13 @@ a.th {
 }
 .f-dropdown.large {
   max-width: 800px;
+}
+
+.inline,
+.inline-list {
+  display: inline-block;
+}
+
+.large-3 + .large-9 {
+  padding-left: 0;
 }

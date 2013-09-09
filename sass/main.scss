@@ -58,8 +58,15 @@
 .inline,
 .inline-list {
   display: inline-block;
+  margin-bottom: 0;
 }
 
 .large-3 + .large-9 {
   padding-left: 0;
+}
+
+button,
+.button {
+  @include box-shadow(none);
+  @include border-radius(6px);
 }

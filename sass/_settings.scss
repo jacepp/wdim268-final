@@ -195,7 +195,7 @@ $column-gutter: emCalc(30);
 
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: normal;
-// $paragraph-font-size: 1em;
+$paragraph-font-size: emCalc(14px);
 // $paragraph-line-height: 1.6;
 // $paragraph-margin-bottom: emCalc(20);
 // $paragraph-aside-font-size: emCalc(14);
@@ -352,7 +352,7 @@ $column-gutter: emCalc(30);
 // We use this to control the display property.
 
 // $button-display: inline-block;
-// $button-margin-bottom: emCalc(20);
+$button-margin-bottom: 0;
 
 // We use these to control button text styles.
 

@@ -1656,7 +1656,7 @@ th.hide-for-touch {
   }
 }
 p.lead {
-  font-size: 1.21875em;
+  font-size: 1.09375em;
   line-height: 1.6;
 }
 
@@ -1710,7 +1710,7 @@ a img {
 p {
   font-family: inherit;
   font-weight: normal;
-  font-size: 1em;
+  font-size: 0.875em;
   line-height: 1.6;
   margin-bottom: 1.25em;
   text-rendering: optimizeLegibility;
@@ -1798,7 +1798,7 @@ code {
 ul,
 ol,
 dl {
-  font-size: 1em;
+  font-size: 0.875em;
   line-height: 1.6;
   margin-bottom: 1.25em;
   list-style-position: outside;
@@ -2033,7 +2033,7 @@ button, .button {
   font-family: inherit;
   font-weight: bold;
   line-height: 1;
-  margin: 0 0 1.25em;
+  margin: 0 0 0;
   position: relative;
   text-decoration: none;
   text-align: center;
@@ -6120,8 +6120,21 @@ a.th {
 .inline,
 .inline-list {
   display: inline-block;
+  margin-bottom: 0;
 }
 
 .large-3 + .large-9 {
   padding-left: 0;
+}
+
+button,
+.button {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
 }

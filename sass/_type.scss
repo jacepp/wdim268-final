@@ -1,0 +1,21 @@
+@include font-face("OS Bold", font-files("OpenSans-Bold-webfont.eot", "OpenSans-Bold-webfont.eot?#iefix", "OpenSans-Bold-webfont.woff", "OpenSans-Bold-webfont.ttf", "OpenSans-Bold-webfont.svg#wf"));
+@include font-face("OS Reg", font-files("OpenSans-Regular-webfont.eot", "OpenSans-Regular-webfont.eot?#iefix", "OpenSans-Regular-webfont.woff", "OpenSans-Regular-webfont.ttf", "OpenSans-Regular-webfont.svg#wf"));
+@include font-face("OS CondLight", font-files("OpenSans-CondLight-webfont.eot", "OpenSans-CondLight-webfont.eot?#iefix", "OpenSans-CondLight-webfont.woff", "OpenSans-CondLight-webfont.ttf", "OpenSans-CondLight-webfont.svg#wf"));
+@include font-face("Fertigo", font-files("fertigo_pro-webfont.eot", "fertigo_pro-webfont.eot?#iefix", "fertigo_pro-webfont.woff", "fertigo_pro-webfont.ttf", "fertigo_pro-webfont.svg#wf"));
+@include font-face("Icomoon", font-files("icomoon.eot", "icomoon.eot?#iefix", "icomoon.woff", "icomoon.ttf", "icomoon.svg#wf"));
+
+
+[data-icon]:before {
+  font-family: 'Icomoon';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// u+e000 Circle with X
+// u+e001 Circle with check

@@ -10,19 +10,22 @@
     <script src="{{ site.baseurl }}/js/vendor/custom.modernizr.js"></script>
   </head>
   <body>
+    <div class="grey-band"></div>
 
     <div class="header-wrapper">
       <header class="row">
         <div class="large-12 columns">
-          <h1 class="inline"><span class="replace-me">wdim268</span> Final project website</h1>
-          <img class="right" src="{{ site.baseurl }}/images/header_search_bar.png" alt="Not really a search bar.">
+          <h1><img src="{{ site.baseurl }}/images/header_page_title.png" alt="WDIM268" /> <span>Final project website</span></h1>
+          <p class="right"><img src="{{ site.baseurl }}/images/header_search_bar.png" alt="Not really a search bar." /></p>
         </div>
       </header>
 
+      <div class="nav-divider"></div>
+
       <nav class="row">
         <div class="large-12 columns">
-          <ul class="inline-list">
-            <li><a href="/">Home</a></li>
+          <ul class="main-nav inline-list">
+            <li class="active"><a href="/">Home</a></li>
             <li><a href="/about/">About</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="/portfolio/">Portfolio</a></li>
@@ -31,10 +34,10 @@
             <li><a href="/pricing/">Pricing</a></li>
           </ul>
 
-          <ul class="inline-list right">
-            <li><a href="">Log in</a></li>
+          <ul class="inline-list right account-access">
+            <li><a href="#" class="log-in">Log in</a></li>
             <li>or</li>
-            <li><a href="" class="button">Sign up</a></li>
+            <li><a href="#" class="sign-up">Sign up</a></li>
           </ul>
         </div>
       </nav>
@@ -50,13 +53,13 @@
           <h5>Latest Blog Entries</h5>
 
           <h6><span class="badge">12.01</span> We did a redesign...</h6>
-          <p>When a naked man's chasing a woman through an alley with a butcher knife and a hard-on, i figure he's not out collecting for the red cross.</p>
+          <p>Through an alley with a butcher knife and a hard-on, i figure he's not out collecting for the red cross.</p>
 
           <h6><span class="badge">12.01</span> Moving to new server</h6>
-          <p>When a naked man's chasing a woman through an alley with a butcher knife and a hard-on, i figure he's not out collecting for the red cross.</p>
+          <p>When a naked man's chasing a woman through and a hard-on, i figure he's not out collecting for the red cross.</p>
 
           <h6><span class="badge">12.01</span> We ave a new client...</h6>
-          <p>When a naked man's chasing a woman through an alley with a butcher knife and a hard-on, i figure he's not out collecting for the red cross.</p>
+          <p>When a naked man's chasing a woman through an alley with a butcher knife and a hard-on, i figure he's not out.</p>
 
         </div>
         <div class="large-3 columns">
@@ -66,7 +69,7 @@
             <div class="large-3 columns">
               <img src="{{ site.baseurl }}/images/footer_speech_bubbles.png" alt="Speech bubbles for flare!">
             </div>
-            <div class="large-9 columns">
+            <div class="large-9 columns footer-comment">
               <p><strong>Ben</strong> said:</p>
               <p>Are you feeling lucky punk</p>
             </div>
@@ -76,9 +79,9 @@
             <div class="large-3 columns">
               <img src="{{ site.baseurl }}/images/footer_speech_bubbles.png" alt="Speech bubbles for flare!">
             </div>
-            <div class="large-9 columns">
+            <div class="large-9 columns footer-comment">
               <p><strong>Joe Santos</strong> said:</p>
-              <p>This is the ak-47 assault rifle, the preferred weapon of your enemy.</p>
+              <p>This is the ak-47 assault rifle, the preferred weapon of your enemy. Weapon of your enemy</p>
             </div>
           </div>
 
@@ -86,7 +89,7 @@
             <div class="large-3 columns">
               <img src="{{ site.baseurl }}/images/footer_speech_bubbles.png" alt="Speech bubbles for flare!">
             </div>
-            <div class="large-9 columns">
+            <div class="large-9 columns footer-comment">
               <p><strong>Marko</strong> said:</p>
               <p>And it makes a distinctive sound when fired at you.</p>
             </div>
@@ -104,8 +107,14 @@
         </div>
         <div class="large-3 columns">
           <h5>Tweeter Stuff</h5>
-          <!-- Make this image a background image via css -->
-          <img src="{{ site.baseurl }}/images/footer_tweet_bg.png" alt="">
+          <img src="{{ site.baseurl }}/images/footer_tweet_bg.png" alt="bird bird bird, birds the word">
+          <div class="tweet">
+            <a class="tweet-name" href="#">wisefalco:</a>
+            <p class="tweet-content"><em><a href="">@simnor</a> Haha, this is really funny(<a href="#">http://tinyurl.com/</a>)</em></p>
+            <p>5 minutes ago from web</p>
+          </div>
+
+          <a class="follow" href="#">Follow us on Twitter</a>
         </div>
       </div>
     </div>
@@ -113,9 +122,10 @@
     <div class="footer-wrapper">
       <footer class="row">
         <div class="large-12 columns">
-          <p class="inline"><span class="site-name">WDIM268</span> <small>Copyright 2009, All rights reserver. Valid(HTML5/CSS3).</small></p>
-          <ul class="inline-list right">
-            <li><a href="/">Home</a></li>
+          <span class="site-name">WDIM268</span> 
+          <span class="foot-small">Copyright 2009, All rights reserver. Valid(HTML5/CSS3).</span>
+          <ul class="footer-nav inline-list right">
+            <li class="active"><a href="/">Home</a></li>
             <li><a href="/about/">About</a></li>
             <li><a href="/services/">Services</a></li>
             <li><a href="/portfolio/">Portfolio</a></li>
@@ -153,8 +163,5 @@
     <script>
       $(document).foundation();
     </script>
-
-    <h1>Fonts: Fertigo</h1>
-      <h1>Fonts: Open Sans Condensed and Regular(?)</h1>
   </body>
 </html>

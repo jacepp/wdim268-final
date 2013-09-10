@@ -7,6 +7,8 @@
 
 // Comment out this import if you are customizing you imports below
 @import "foundation";
+@import "type";
+@import "vars";
 
 // Import specific parts of Foundation by commenting the import "foundation"
 // and uncommenting what you want below. You must uncomment the following if customizing
@@ -55,10 +57,46 @@
 // @import "foundation/components/tooltips";
 // @import "foundation/components/dropdown";
 
-.inline,
-.inline-list {
-  display: inline-block;
-  margin-bottom: 0;
+.columns {
+  &.no-padding {
+    padding: 0;
+  }
+  &.pricing-options {
+    margin-bottom: emCalc(23px);
+    .option-list {
+      padding: emCalc(30px) emCalc(20px);
+      background-color: #eee;
+      border-right: 1px solid #aaa;
+      &:last-child {
+        border-right: none;
+      }
+      h3 {
+        font-size: emCalc(22px);
+        margin-bottom: 0;
+        color: $body-font-color;
+      }
+      .option-title {
+        min-height: 60px;
+      }
+      .price {
+        font-size: emCalc(20px);
+        font-weight: 900;
+      }
+      button {
+        background-color: #ddd;
+        border: 1px solid #aaa;
+        color: $body-font-color;
+      }
+    }
+}
+}
+
+.inline {
+  display: inline;
+}
+
+.no-margin {
+  margin: 0;
 }
 
 .large-3 + .large-9 {
@@ -71,5 +109,468 @@ button,
   @include border-radius(6px);
 }
 
-// @include hide-text();
-// display: block;
+.blue-check {
+  margin-right: emCalc(20px);
+  color: $hero-blue;
+}
+
+.red-x {
+  margin-right: emCalc(20px);
+  color: $alert-color;
+}
+
+.grey-band {
+  height: emCalc(4px);
+  background-color: $footer-bg-color;
+}
+
+.header-wrapper {
+  padding-top: emCalc(10px);
+  padding-bottom: emCalc(10px);
+}
+
+header {
+  padding-bottom: emCalc(12px);
+  h1 {
+    margin: 0;
+    display: inline-block;
+    line-height: 1; 
+    > span {
+      font-family: "Fertigo", Arial, sans-serif;
+      font-size: emCalc(10px);
+      line-height: 44px;
+      color: #fdfdfd;
+      text-shadow: -1px -1px 0 rgba(0,0,0,.25), 1px -1px 0 rgba(0,0,0,.25), -1px 1px 0 rgba(0,0,0,.25), 1px 1px 0 rgba(0,0,0,.25);
+    }
+  }
+  p {
+    margin: 0;
+    display: inline-block;
+    line-height: 44px;
+  }
+}
+
+.nav-divider {
+  margin-bottom: emCalc(10px);
+  height: emCalc(1px);
+  background-color: $light-copy-text;
+}
+
+.bottom-divider {
+  height: emCalc(6px);
+  background-color: #ddd;
+}
+
+.inline-list {
+  display: inline-block;
+  margin-bottom: 0;
+  &.main-nav {
+    text-transform: uppercase;
+    li {
+      margin-left: emCalc(30px);
+      line-height: 28px;
+      &:first-child {
+        margin-left: emCalc(22px);
+      }
+      > a {
+        color: $dark-copy-text;
+      }
+      &.active {
+        > a {
+          @include button($button-med, $soft-orange, false, false, false);
+          padding: emCalc(7px) emCalc(14px);
+          @include border-radius(6px);
+        }
+      }
+    }
+  }
+  &.account-access {
+    li {
+      margin-left: emCalc(8px);
+      line-height: 28px;
+      &:first-child {
+        margin-left: 0;
+      }
+      > a {
+        color: $dark-copy-text;
+        &.log-in {
+          font-family: "OS Bold";
+          font-weight: bold;
+        }
+        &.sign-up {
+          @include button($button-med, $hero-blue, false, false, false);
+          padding: emCalc(7px) emCalc(14px);
+          @include border-radius(6px);
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  &.main-content-nav {
+    li {
+      margin: 0;
+      &:first-child {
+        margin-left: emCalc(35px);
+      }
+    }
+  }
+  &.footer-nav {
+    text-transform: uppercase;
+    li {
+      margin-left: emCalc(20px);
+      line-height: 44px;
+      &:first-child {
+        margin-left: 0;
+      }
+      > a {
+        font-size: emCalc(12px);
+        color: $dark-copy-text;
+      }
+      &.active {
+        > a {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.hero-wrapper {
+  padding: emCalc(60px) 0;
+  background-color: $hero-blue;
+  box-shadow: inset 0 2px 2px rgba(0,0,0,.35);
+}
+
+.content-wrapper {
+  padding: emCalc(40px) 0 emCalc(50px);
+  @include background-image(linear-gradient($body-bg, #fdfdfd, #fff));
+  box-shadow: inset 0 2px 2px rgba(0,0,0,.35);
+  .relative-wrapper {
+    position: relative;
+    max-width: 1090px;
+    margin: 0 auto;
+    .left-shadow {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .right-shadow {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+}
+
+.bottom-wrapper {
+  padding: emCalc(15px) 0 emCalc(50px);
+  background-color: $footer-bg-color;
+  color: #fdfdfd;
+  h5 {
+    margin-bottom: emCalc(15px);
+    font-family: "OS CondLight";
+    font-weight: 200;
+    color: #eee;
+    border-bottom: 1px solid #eee;
+    text-transform: uppercase;
+    letter-spacing: 1;
+  }
+  h6 {
+    font-size: emCalc(10px);
+    color: #fff;
+    + p {
+      font-size: emCalc(10px);
+    }
+  }
+  .footer-comment {
+    font-size: emCalc(12px);
+  }
+  .tweet {
+    position: absolute;
+    top: 70px;
+    left: 30px;
+    font-family: "Fertigo";
+    font-size: emCalc(12px);
+    color: $body-font-color;
+    a {
+      color: $deep-orange;
+    }
+    .tweet-name {
+      font-weight: bold;
+    }
+    .tweet-content {
+      font-size: emCalc(17px);
+    }
+  }
+  .follow {
+    position: absolute;
+    bottom: 50px;
+    left: 15px;
+    font-size: emCalc(10px);
+    color: #fdfdfd;
+    text-decoration: underline;
+  }
+}
+
+.hero {
+  color: #fdfdfd;
+  h1 {
+    font-family: "OS CondLight";
+    font-size: emCalc(40px);
+    color: #fdfdfd;
+    font-weight: 200;
+    letter-spacing: 1px;
+  }
+  p {
+    &.bigger {
+      font-size: emCalc(16px);
+    }
+    + p {
+      margin: 0;
+    }
+  }
+  .hero-buttons {
+    padding-top: emCalc(40px);
+    .get-quote {
+      @include button($button-med, #ddd, false, false, false);
+      padding: emCalc(10px) emCalc(35px);
+      @include border-radius(6px);
+      font-weight: 200;
+      text-transform: uppercase;
+    }
+    .view-portfolio {
+      @include button($button-med, $deep-orange, false, false, false);
+      padding: emCalc(10px) emCalc(18px);
+      @include border-radius(6px);
+      font-weight: 200;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.main-content {
+  padding: emCalc(40px);
+  h3 {
+    color: $hero-blue;
+  }
+  .small {
+    font-size: emCalc(12px);
+  }
+}
+
+footer {
+  .site-name {
+    font-size: emCalc(18px); 
+    font-weight: bold;
+    line-height: 1;
+  }
+  .foot-small {
+    font-size: emCalc(12px);
+    line-height: 44px;
+  }
+}
+
+.page-content {
+  padding: emCalc(15px) emCalc(15px) emCalc(40px);
+  background-color: #fff;
+}
+
+.sidebar {
+  margin-bottom: emCalc(25px);
+  padding: emCalc(5px) emCalc(5px) 0;
+  background-color: #eee;
+  &.contact {
+    padding: emCalc(7px);
+  }
+  h5 {
+    font-size: emCalc(16px);
+    color: $body-font-color;
+  }
+  .no-margin {
+    font-size: emCalc(12px);
+    strong {
+      color: #333;
+    }
+  }
+  p {
+    + h5 {
+      margin-top: emCalc(30px);
+    }
+  }
+  .sidebar-one {
+    margin: 0;
+    font-family: "OS CondLight";
+    font-weight: 900;
+    font-size: emCalc(22px);
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 3;
+  }
+  .sidebar-title {
+    margin: 0;
+    font-size: emCalc(16px);
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .sidebar-number {
+    margin: 0;
+    font-size: emCalc(18px);
+    text-align: center;
+    color: $deep-orange;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+  }
+  .sidebar-menu {
+    padding-left: emCalc(10px);
+    padding-bottom: 0;
+    font-size: emCalc(14px);
+    text-transform: uppercase;
+    line-height: 3;
+    > li {
+      > a {
+        color: $body-font-color;
+      }
+    }
+  }
+}
+
+.sidebar-bullets {
+  padding-left: emCalc(15px);
+  font-size: emCalc(11px);
+  > li {
+    line-height: 2;
+  }
+}
+
+.pricing-bullet {
+  padding: emCalc(15px) 0 0;
+  > li {
+    font-size: emCalc(14px);
+    line-height: 2;
+  }
+}
+
+.sidebar-junk {
+  h6 {
+    font-size: emCalc(14px);
+  }
+  span {
+    display: block;
+    font-size: emCalc(12px);
+  }
+  img {
+    padding: emCalc(20px) 0;
+  }
+}
+
+.more-sidebar-junk {
+  p {
+    margin: 0;
+    font-size: emCalc(10px);
+  }
+}
+
+.sidebar-stuff {
+  h5 {
+    font-size: emCalc(14px);
+  }
+  p {
+    font-size: emCalc(12px);
+  }
+}
+
+.page-main-content {
+  h3 {
+    margin-bottom: 0;
+    font-size: emCalc(25px);
+    color: #333;
+  }
+  h4 {
+    margin-top: 0;
+    margin-bottom: emCalc(30px);
+    font-size: emCalc(18px);
+    color: $light-copy-text;
+  }
+  h5 {
+    color: $deep-orange;
+  }
+  p {
+    padding-right: emCalc(15px);
+  }
+  a {
+    color: $deep-orange;
+  }
+  .portfolio-main {
+    p {
+      font-size: emCalc(12px);
+    }
+  }
+  .portfolio-panel {
+    padding: emCalc(20px);
+    background-color: #f8f8f8;
+    + .portfolio-panel {
+      margin-top: emCalc(20px);
+    }
+    p {
+      font-size: emCalc(12px);
+    }
+  }
+  &.pricing-page {
+    padding-bottom: emCalc(40px);
+    h4 {
+      margin-bottom: emCalc(20px);
+    }
+    h5 {
+      font-size: emCalc(14px);
+      color: $light-copy-text; 
+    }
+    p {
+      font-size: emCalc(12px);
+    }
+  }
+}
+
+.sub-page-content {
+  padding-top: emCalc(40px);
+  .large-4 {
+    &.columns {
+      padding-top: emCalc(60px);
+    }
+  }
+}
+
+.post-meta {
+  font-size: emCalc(12px);
+}
+
+.solo {
+  margin: emCalc(20px) 0;
+}
+
+.orange {
+  color: $deep-orange;
+}
+
+h5,
+h4 {
+  &.not-orange {
+    color: #333;
+  }
+}
+
+a.blue {
+  font-weight: bold;
+  color: $hero-blue;
+}
+
+form {
+  input[type=text],
+  textarea {
+    background-color: #f8f8f8;
+  }
+  input[type=text] {
+    width: 275px;
+  }
+  textarea {
+    height: 150px;
+  }
+}

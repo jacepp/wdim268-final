@@ -1,3 +1,18 @@
+navigation:
+- text: Home
+  url: /index.html
+- text: About
+  url: /about/index.html
+- text: Services
+  url: #
+- text: Portfolio
+  url: /portfolio/index.html
+- text: Blog
+  url: /blog/index.html
+- text: Pricing
+  url: /pricing/index.html
+---
+
 <!DOCTYPE html>
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -24,7 +39,7 @@
 
       <nav class="row">
         <div class="large-12 columns">
-          <ul class="main-nav inline-list">
+          <!-- <ul class="main-nav inline-list">
             <li class="active"><a href="{{ site.baseurl }}/">Home</a></li>
             <li><a href="{{ site.baseurl }}/about/">About</a></li>
             <li><a href="#">Services</a></li>
@@ -32,6 +47,12 @@
             <li><a href="{{ site.baseurl }}/blog/">Blog</a></li>
             <li><a href="{{ site.baseurl }}/contact/">Contact</a></li>
             <li><a href="{{ site.baseurl }}/pricing/">Pricing</a></li>
+          </ul> -->
+          <ul class="main-nav inline-list">
+            {% for link in page.navigation %}
+            <li {% if page.url == link.url %}class="active"{% endif %}>
+               <a href="{{ site.baseurl }}{{ link.url }}">{{ link.text }}</a></li>
+            {% endfor %}
           </ul>
 
           <ul class="inline-list right account-access">

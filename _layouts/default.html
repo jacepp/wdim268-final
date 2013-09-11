@@ -1,17 +1,17 @@
 ---
 navigation:
 - text: Home
-  url: /index.html
+  url: /
 - text: About
-  url: /about/index.html
+  url: /about/
 - text: Services
   url: #
 - text: Portfolio
-  url: /portfolio/index.html
+  url: /portfolio/
 - text: Blog
-  url: /blog/index.html
+  url: /blog/
 - text: Pricing
-  url: /pricing/index.html
+  url: /pricing/
 ---
 
 <!DOCTYPE html>
@@ -40,15 +40,6 @@ navigation:
 
       <nav class="row">
         <div class="large-12 columns">
-          <!-- <ul class="main-nav inline-list">
-            <li class="active"><a href="{{ site.baseurl }}/">Home</a></li>
-            <li><a href="{{ site.baseurl }}/about/">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="{{ site.baseurl }}/portfolio/">Portfolio</a></li>
-            <li><a href="{{ site.baseurl }}/blog/">Blog</a></li>
-            <li><a href="{{ site.baseurl }}/contact/">Contact</a></li>
-            <li><a href="{{ site.baseurl }}/pricing/">Pricing</a></li>
-          </ul> -->
           <ul class="main-nav inline-list">
             {% for link in page.navigation %}
             <li {% if page.url == link.url %}class="active"{% endif %}>
